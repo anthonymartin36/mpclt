@@ -12,7 +12,6 @@
     "strict": true,
     "allowImportingTsExtensions": true,
     "allowJs": true,
-    "skipLibCheck": true,
-    "typeRoots": ["./node_modules/@types", "./node_modules/vite/client"]
+    "skipLibCheck": true
   }
 }
