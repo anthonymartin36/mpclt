@@ -1,0 +1,234 @@
+.cat-sightings{
+  padding: 8em;
+  @include row-flex;
+  gap: 5em;
+  background: $orange;
+  height: 100vh;
+
+
+
+  &__left{
+    flex-basis: 50%;
+    padding-top: 6em;
+  }
+
+  &__map{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
+
+  &__right{
+    flex-basis: 50%;
+    padding-top: 6em;
+    @include column-flex;
+    gap: 4em;
+  }
+
+  &__header{
+    @include row-flex;
+    justify-content: space-between
+  }
+  
+  &-heading{
+    @include display-font;
+  }
+
+  &__cards{
+    @include column-flex;
+    gap: 5em;
+    height: 100%;
+    overflow-y: scroll
+    
+  }
+
+  &-card{
+    @include column-flex;
+    background: $white;
+    padding: 3em;
+    border-radius: 15px;
+    gap: 3em;
+
+    &__top{
+      @include row-flex;
+      gap: 4em;
+      width: 100%
+    }
+
+    &-title{
+      font-family: $body-font;
+      font-size: 2em;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    &-info{
+      font-family: $body-font;
+      font-size: 2em;
+      font-weight: 700;
+    }
+      
+  &__img{
+    flex-basis: 50%;
+    display: flex;
+    @include center-flex;
+    flex-shrink: 0;
+    // width: 100%;
+    height: 25em;
+    border-radius: 15px;
+    overflow: hidden; 
+  }
+
+  &-img{
+    width: 100%;
+    // object-fit: cover;
+    // object-position: center center;
+  }
+
+  &__info{
+    width: 100%;
+    @include column-flex;
+    justify-content: space-around;
+  }
+
+  &-section{
+    @include row-flex;
+    justify-content: space-between;
+  }
+
+  &-section:nth-child(2){
+    @include column-flex;
+  }
+
+  &__bottom{
+    @include column-flex;
+    gap: 1em;
+  }
+
+  
+
+  }
+&__btn{
+// height: 80%;
+  @include row-flex;
+  @include center-flex;
+}
+
+  &-btn{
+    @include row-flex;
+    @include center-flex;
+    background: none;
+    gap: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.8em 2em;
+    border: solid 2px $blue;
+    border-radius: 30px;
+    cursor: pointer;
+    color: $black;
+
+    svg{
+      fill: $black;
+    }
+
+    &:hover{
+      @include btn-hover;
+      color: $white;
+
+      svg{
+        fill: $white;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+  
+  // Form Styling
+
+  &__form{
+    @include column-flex;
+    align-items: center;
+    background: $white;
+    padding: 3em;
+    border-radius: 15px;
+  }
+
+  &-form{
+    @include column-flex;
+    align-items: center;
+
+    &-heading{
+      @include subhead-font;
+    }
+
+    &__content {
+      @include row-flex;
+      justify-content: space-around;
+    }
+
+    &__left{
+      flex-basis: 50%;
+      padding: 5em;
+      @include column-flex;
+      gap: 4em;
+    }
+
+    &__right{
+      flex-basis: 50%;
+      padding: 5em;
+      @include column-flex;
+      gap: 4em;
+    }
+
+    &__section{
+      @include column-flex;
+    }
+
+    &-label{
+      font-family: $body-font;
+      font-size: 2em;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    &-input{
+      padding: 1em 1em;
+      // width: 20em;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+    }
+
+    &-input:focus{
+      outline: none !important;
+      border:1px solid $blue;
+      box-shadow: 0 0 4px $blue;
+    }
+    
+    
+    &-privacy{
+      font-family: $body-font;
+      font-size: 2em;
+      font-family: 500;
+    }
+
+    &-btn{
+      background: none;
+      gap: 1em;
+      font-size: 1.5em;
+      font-weight: bold;
+      padding: 0.8em 3em;
+      border: solid 2px $blue;
+      border-radius: 30px;
+      cursor: pointer;
+      color: $black;
+
+      
+    &:hover{
+      @include btn-hover;
+      color: $white;
+    }
+    }
+
+  }
+
+}

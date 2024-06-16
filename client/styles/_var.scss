@@ -1,0 +1,27 @@
+// Colour Palette
+$white: #f3f3f3;
+$black: #212121;
+$blue: #B9D9FF;
+$orange: #FFDFB9;
+$purple: #FFB9FC;
+$green: #B9FFBC;
+
+// Fonts - Body
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// Fonts - Display
+@font-face {
+  font-family: "Gogh";
+  src: url("../fonts/Gogh-ExtraBold.otf"),
+  url("../fonts/Gogh-ExtraBoldItalic.otf");
+}
+
+// Font variables
+$body-font:'Montserrat', sans-serif;
+$display-font: 'Gogh', sans-serif;
+
+
+.form-transition {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+

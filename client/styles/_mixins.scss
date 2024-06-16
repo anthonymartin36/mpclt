@@ -1,0 +1,48 @@
+// Flexbox mixins
+
+// Row Flex
+@mixin row-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+// column Flex
+@mixin column-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin center-flex{
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin display-font{
+  margin: 0;
+  font-family: $display-font;
+  font-size: 5em;
+}
+
+@mixin subhead-font{
+  font-family: $display-font;
+  font-size: 3em;
+}
+
+@mixin subheading-body-font{
+  font-family: $body-font;
+  font-style: italic;
+  font-weight: 500;
+  padding-left: 1em;
+  border-left: solid 1px;
+}
+
+@mixin btn-hover{
+  color: $black;
+  background: $blue;
+  transition: 0.3s ease-in-out;
+}
+
+// @mixin body-font{
+//   font-family: $body-font;
+//   font-size: 1.5em;
+// }

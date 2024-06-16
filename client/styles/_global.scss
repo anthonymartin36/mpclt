@@ -1,0 +1,12 @@
+
+.loading{
+  height: 100vh;
+  width: 100%;
+  @include column-flex;
+  gap: 2em;
+  @include center-flex;
+
+  &-heading{
+    @include display-font;
+  }
+}

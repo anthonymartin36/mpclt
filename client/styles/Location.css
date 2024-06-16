@@ -1,0 +1,33 @@
+.pac-item {
+    cursor: default;
+    padding: 0 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    white-space: nowrap;
+    line-height: 30px;
+    text-align: left;
+    border-top: 1px solid #fafafa;
+    font-size: 13px;
+    background-color: #fafafa;
+    color: #070707
+}
+.pac-item:hover {
+    background-color: #fafafa
+}
+.pac-item-selected,
+.pac-item-selected:hover {
+    background-color: #ebf2fe;
+    color: #000
+}
+.pac-matched {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #000
+}
+.pac-item-query {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    padding-right: 3px;
+    color: #000
+}

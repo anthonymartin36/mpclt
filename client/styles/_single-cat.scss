@@ -1,0 +1,221 @@
+.single-cat{
+  height: 100vh;
+  width: 100%;
+  @include row-flex;
+  justify-content: space-between;
+  gap: 3em;
+  padding: 8em;
+  padding-top: 10em;
+  background: $orange;
+
+  &__left{
+    flex-basis: 50%;
+    height: 100%;
+    padding-top: 4em;
+    overflow: hidden;
+  }
+
+  &-back{
+    width: 20%;
+    margin-left: 10em;
+    position: relative;
+    padding-bottom: 2em;
+  }
+
+  &__img{
+    height: 100%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+
+    &-left{
+      flex-basis: 20%;
+      height: 100%;
+      @include column-flex;
+      gap: 0.5em;
+    }
+
+    &-right{
+      flex-basis: 70%;
+      overflow: hidden;
+      display: flex;
+    }
+
+  }
+
+  &-btn-img{
+    width: 100%;
+    height: auto;
+    align-self: center;
+  }
+
+  // Big Image
+  &-img{
+    width: 100%;
+    width: auto;
+    border-radius: 15px;
+    // Btn coantins Small img
+    &-btn{
+      flex-basis: 20%;
+      height: 50%;
+      overflow: hidden;
+      display: flex;
+      border-radius: 15px;
+      border: none;
+      cursor: pointer;
+
+      &:focus{
+        outline: none !important;
+        border:2px solid $blue;
+        box-shadow: 0 0 4px $blue;
+      }
+    }
+  }
+
+  &__right{
+    padding-top: 4em;
+    flex-basis: 50%;
+    @include column-flex;
+    gap: 2em;
+  }
+
+  &__header{
+    @include column-flex;
+    gap: 2em;
+  }
+
+  &__heading{
+    width: 100%;
+    justify-content: space-between;
+    @include row-flex;    
+  }
+
+  &-heading{
+    @include display-font;
+  }
+
+  &-subheading{
+    @include subheading-body-font;
+    font-size: 2em;
+  }
+
+  &__description{
+    @include column-flex;
+    gap: 1em;
+    width: 100%;
+  }
+
+  &-description{
+    font-family: $body-font;
+    font-size: 2.5em;
+    font-weight: 500;
+  }
+
+  &__table{
+    width: 100%;
+    padding: 3em;
+    border-radius: 15px;
+    background: $white;
+    @include column-flex;
+    gap: 2em;
+  }
+
+  &__section{
+    width: 100%;
+    @include row-flex;
+    justify-content: space-between;
+  }
+
+  &-info{
+
+    &-heading{
+      @include subheading-body-font;
+      padding: 0;
+      border: 0;
+      font-size: 2em;
+    }
+
+    &-body{
+      font-family: $body-font;
+      font-weight: 600;
+      font-size: 2em;
+    }
+
+  }
+
+  &__links{
+    @include row-flex;
+    justify-content: space-between;
+  }
+
+  &__link{
+    width: 20%
+  }
+
+  &__link:nth-child(2){
+    width: 30%;
+  }
+
+  &-link{
+    
+    &-btn{
+      background: none;
+      width: 100%;
+      @include row-flex;
+      @include center-flex;
+      gap: 1em;
+      font-size: 1.5em;
+      font-weight: bold;
+      padding: 0.8em 0.5em;
+      border: solid 2px $blue;
+      border-radius: 30px;
+      cursor: pointer;
+      color: $black;
+  
+      svg{
+        fill: $black;
+      }
+  
+      &:hover{
+        @include btn-hover;
+        color: $white;
+  
+        svg{
+          fill: $white;
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+
+
+    @include row-flex;
+    @include center-flex;
+    gap: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.8em 0.5em;
+    border: solid 2px $blue;
+    border-radius: 30px;
+    cursor: pointer;
+    color: $black;
+
+    svg{
+      fill: $black;
+    }
+
+    &:hover{
+      @include btn-hover;
+      color: $white;
+
+      svg{
+        fill: $white;
+        transition: 0.3s ease-in-out;
+      }
+    }
+
+    &--back{
+      padding: 0.8em 2em;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.add-m-cat{
+  height: 100vh;
+  width: 100%;
+  padding: 8em;
+  padding-top: 10em;
+  @include column-flex;
+  gap: 6em;
+  align-items: center;
+  background: $orange;
+
+  
+
+  &-heading{
+    @include display-font;
+  }
+
+  &__form{
+    @include column-flex;
+    align-items: center;
+    background: $white;
+    padding: 6em;
+    border-radius: 15px;
+
+  }
+
+  &-form{
+    @include row-flex;
+    padding: 2em;
+    gap: 5em;
+
+
+    &-div{
+      height: 100%;
+      border: solid 1px $blue;
+      opacity: 60%;
+    }
+
+      
+    &-heading{
+      @include subhead-font;
+    }
+    
+    &__section{
+      flex-basis: 33%;
+      @include column-flex;
+      gap: 2em;
+    }
+
+    &-section{
+      @include column-flex;
+      gap: 1em;
+    }
+
+    &-label{
+      font-family: $body-font;
+      font-size: 2em;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    &-input{
+      padding: 1em 1em;
+      // width: 20em;
+      border: none;
+      border-radius: 10px;
+    }
+
+    &-input:focus{
+      outline: none !important;
+      border:1px solid $blue;
+      box-shadow: 0 0 4px $blue;
+    }
+
+    &-privacy{
+      font-family: $body-font;
+      font-size: 2em;
+      font-family: 500;
+    }
+
+    &-btn{
+      background: none;
+      gap: 1em;
+      font-size: 1.5em;
+      font-weight: bold;
+      padding: 0.8em 3em;
+      border: solid 2px $blue;
+      border-radius: 30px;
+      cursor: pointer;
+      color: $black;
+
+      
+    &:hover{
+      @include btn-hover;
+      color: $white;
+    }
+    }
+  
+  }
+}

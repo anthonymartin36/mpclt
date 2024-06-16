@@ -1,0 +1,197 @@
+.cats {
+  height: 100vh;
+  width: 100%;
+  @include row-flex;
+  background: $white;
+
+  &__left{
+    height: 100%;
+    flex-basis: 20%;
+    @include column-flex;
+    @include center-flex;
+    background: $orange;
+  }
+
+  &-filter{
+    @include column-flex;
+    @include center-flex;
+    gap: 3em;
+
+    &-header{
+      @include subhead-font;
+    }
+
+    // form starts
+
+    &-form{
+      @include column-flex;
+      @include center-flex;
+      gap: 2em;
+
+      &__section{
+        @include column-flex;
+      }
+
+      &-section:nth-child(3){
+        padding-top: 2em;
+      }
+
+      &-label {
+        font-family: $body-font;
+        font-size: 2em;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      &-input{
+        padding: 1em 8em 1em 0.5em;
+        // width: 20em;
+        border: none;
+        border-radius: 10px;
+      }
+
+      &-input:focus{
+        outline: none !important;
+        border:1px solid $blue;
+        box-shadow: 0 0 4px $blue;
+      }
+
+      &-btn{
+        @include row-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1em;
+        background: none;
+        color: $black;
+        font-family: $body-font;
+        font-weight: bold;
+        font-size: 1.5em;
+        border: solid 2px $blue;
+        padding: 0.8em 3em;
+        border-radius: 30px;
+        cursor: pointer;
+
+        svg{
+          fill: $black;
+        }
+      }
+
+      &-btn:hover {
+        @include btn-hover;
+        color: $white;
+
+        svg{
+          fill: $white;
+          transition: 0.3s ease-in-out;
+        }
+
+      }
+    }
+
+    // Form Ends
+  }
+
+  &__right{
+    height: 100%;
+    padding-top: 10em;
+    flex-basis: 80%;
+    @include column-flex;
+    gap: 5em;
+    align-items: center;
+    overflow-x: scroll;
+    // @include center-flex;
+    }
+
+  &-header{
+    @include display-font;
+  }
+
+  &__cards{
+    @include row-flex;
+    @include center-flex;
+    flex-wrap: wrap;
+    gap: 5em;
+  }
+
+  &-card{
+    width: 40em;
+    padding: 1em;
+    @include column-flex;
+    gap: 2em;
+    border-radius: 15px;
+    background: $orange;
+
+    &__img{
+      display: flex;
+      @include center-flex;
+      flex-shrink: 0;
+      width: 100%;
+      height: 25em;
+      border-radius: 15px 15px 0px 0px;
+      overflow: hidden; 
+    }
+
+    &-img{
+      width: 100%;
+      // object-fit: cover;
+      // object-position: center center;
+    }
+
+    &__info{
+      @include column-flex;
+      gap: 1.5em;
+    }
+
+    &-title{
+      @include subhead-font;
+    }
+
+    &-location{
+      @include subheading-body-font;
+      font-size: 1.5em;
+    }
+
+    &-bio{
+      font-family: $body-font;
+      font-size: 1.5em;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__link{
+      width: 50%
+    }
+
+    &-link{
+      @include row-flex;
+      @include center-flex;
+      gap: 1em;
+      font-size: 1.5em;
+      font-weight: bold;
+      padding: 0.8em 0.5em;
+      border: solid 2px $blue;
+      border-radius: 30px;
+      cursor: pointer;
+      color: $black;
+
+      svg{
+        fill: $black;
+      }
+
+      &:hover{
+        @include btn-hover;
+        color: $white;
+
+        svg{
+          fill: $white;
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+
+    
+  }
+
+}
